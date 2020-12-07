@@ -93,7 +93,7 @@ app.post("/list-post", function (req, res) {
   console.log(req.body);
   console.log("getPost");
 });
-
-app.listen(3000, "0.0.0.0", () => {
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
   console.log("server run at ... :3000");
 });
