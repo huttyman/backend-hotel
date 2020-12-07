@@ -48,6 +48,7 @@ handleDisconnect();
 
 app.get("/", (req, res) => {
   res.send("Server is ready");
+  console.log("start");
 });
 
 app.get("/room-list", function (req, res) {
@@ -93,6 +94,6 @@ app.post("/list-post", function (req, res) {
   console.log("getPost");
 });
 
-app.listen(4000, () => {
-  console.log("server run at ... :4000");
+app.listen(3000, () => {
+  console.log("server run at ... :3000");
 });
