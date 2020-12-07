@@ -59,6 +59,19 @@ app.get("/room-list", function (req, res) {
   });
 });
 
+app.delete("/", function (req, res) {
+  console.log(req.query);
+  let sql = `DELETE FROM room_type`;
+  connection.query(sql, function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+    res.json({
+      status: 200,
+      message: "Delete successfully",
+    });
+  });
+});
+
 app.get("/new-get", function (req, res) {
   console.log(req.query);
   let sql = `INSERT INTO room_type(id, room_type_name) VALUES (?)`;
